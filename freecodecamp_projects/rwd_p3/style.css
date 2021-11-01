@@ -1,0 +1,239 @@
+*{
+    box-sizing:border-box;
+}
+html{
+    font-size:16px;
+    padding:0;
+}
+body{
+    background:url(imgs/bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin:0;
+    font-family:'Rubik', Arial, sans-serif;
+    font-size:1rem;
+    text-align:center;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    height:5em;
+    padding:0.5em 1em;
+    background:rgba(255,255,255,0.8);
+    box-shadow:rgba(0,198,159,0.2) 0 2px 5px;
+}
+#header-img{
+    height:4em;
+}
+nav ul{
+    display:flex;
+    list-style:none;
+    padding:0;
+}
+nav li{
+    margin:0 0.5em;
+}
+nav a{
+    color:#077;
+    font-family:'Quicksand';
+    text-decoration:underline 0.15em rgba(0,198,159,0);
+    white-space: nowrap;
+    transition:text-decoration-color 0.4s;
+}
+nav a:hover{
+    text-decoration-color:rgba(0,198,159,1);
+}
+main{
+    padding:0 1%;
+}
+h2{
+    font-family:'Quicksand';
+    font-weight:600;
+}
+section{
+    padding:1em 0 3em 0;
+}
+#about{
+    padding-top:7em;
+}
+.colored{
+    color:#00c69f;
+}
+#shapers{
+    width:80%;
+    margin:0 auto;
+}
+#shapers dt{
+    color:#077;
+    font-weight:bold;
+    white-space:nowrap;
+}
+#shapers div{
+    display:flex;
+    flex-wrap:wrap;
+    margin-bottom:0.5em;
+}
+#shapers dt::after{
+    content:":";
+}
+#shapers dd{
+    margin:0 0.5em;
+    text-align:left;
+}
+#products{
+    background:linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0));
+}
+#catalog{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+#catalog div{
+    width:22%;
+    background:rgba(255,255,255,0.75);
+    padding-bottom:0.5em;
+    border-radius:3em;
+    overflow:hidden;
+    box-shadow:rgba(0,0,0,0.2) 2px 2px 5px;
+    margin: 0 0 2% 0;
+}
+#catalog dt{
+    background:rgba(0,247,255,0.25);
+    padding:0.5em;
+    margin-bottom:0.5em;
+    font-weight:bold;
+}
+#catalog dd{
+    padding:0 0.5em 0.5em 0.5em;
+    margin:0;
+}
+#catalog dd.prod_img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:auto;
+    max-height:25em;
+    background:rgb(255,255,255);
+    box-shadow:rgba(0,0,0,0.2) 0 1px 5px;
+}
+#catalog dd.prod_img img{
+    height:auto;
+    max-height:25em;
+}
+#catalog dd.size{
+    padding:0 calc((100% - 6.5em)/2);
+    padding-bottom:0.5em;
+}
+#catalog dd.select_board{
+    display:flex;
+    justify-content:center;
+    padding-top:0;
+}
+#catalog dd.select_board button{
+    cursor:pointer;
+    padding:0.5em 1em;
+    background:rgb(0,247,255);
+    border:#666 1px solid;
+    border-radius:0.25em;
+    box-shadow:rgba(0,0,0,0.2) 2px 2px 2px;
+    transition:all 0.4s;
+}
+#catalog dd.select_board button:hover{
+    border:#aaa 1px solid;
+    color:#fff;
+}
+#catalog dd.select_board button:active{
+    background:rgb(0,115,119);
+    box-shadow:none;
+    color:#fff;
+}
+.bottom_half{
+    display:flex;
+    flex-wrap:wrap;
+    background:rgba(255,255,255,0.75);
+}
+.bottom_half section{
+    flex:1;
+    padding-left:1em;
+    padding-right:1em;
+}
+.video_container{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    padding-top:56.25%;
+}
+#video{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+}
+#form input{
+    margin-left:1em;
+}
+#form input[type="email"]{
+    padding:0.5em 1em;
+}
+#form input[type="submit"]{
+    cursor:pointer;
+    padding:0.5em 1em;
+    background:rgb(0,198,159);
+    border:#666 1px solid;
+    border-radius:0.25em;
+    box-shadow:rgba(0,0,0,0.2) 2px 2px 2px;
+    transition:all 0.4s;
+}
+#form input[type="submit"]:hover{
+    border:#aaa 1px solid;
+    color:#fff;
+}
+#form input[type="submit"]:active{
+    background:rgb(0,119,119);
+    box-shadow:none;
+    color:#fff;
+}
+footer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:98%;
+    height:3em;
+    background:rgba(0,0,0,0.3);
+    margin:0 1%;
+    color:#fff;
+    text-shadow:rgba(0,0,0,0.5) 0px 0px 2px;
+}
+footer .colored{
+    text-shadow:none;
+}
+@media (max-width:700px){
+    header{
+        flex-direction:column;
+        height:7em;
+    }
+}
+@media (max-width:600px){
+    #about p, #shapers{
+        width:94%;
+    }
+    #catalog div{
+        width:48%;
+    }
+    .bottom_half section{
+        flex:none;
+        width:100%;
+        padding-left:1%;
+        padding-right:1%;
+    }
+    #form input{
+        margin-left:0.25em;
+    }
+}

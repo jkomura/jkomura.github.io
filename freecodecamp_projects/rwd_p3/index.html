@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project3 Landing Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Rubik">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <img id="header-img" src="imgs/logo.png" alt="company logo">
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#products" class="nav-link">Boards</a></li>
+                <li><a href="#surf_nyc" class="nav-link">Surf in NYC</a></li>
+                <li><a href="#registration" class="nav-link">News Letter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>Hello, we are R<span class="colored">o</span>ckaway Surfboards</h1>
+            <p>Rockaway Surfboards is NYC based surfboard brand dedicated to all surfers in the world.<br>Our surfboards are 100% hand crafted by our expert shapers.</p>
+            <h2>Meet Our Shapers</h2>
+            <dl id="shapers">
+                <div>
+                    <dt>Joe "Mini" Simmons</dt>
+                    <dd>Our main shaper, Beach 67 navive Joe "Mini" Simmons is also a world well known legendary surfer, creates the ultimate wave riders with his soul.</dd>
+                </div>
+                <div>
+                    <dt>The Tip</dt>
+                    <dd>The Tip was born and raised in Maui, grew up with Hawaiian big tubes. He moved to NYC to attend Person's School of Design in eraly 2000's.</dd>
+                </div>
+                <div>
+                    <dt>Dave Wipeout</dt>
+                    <dd>Our shotgun rider from Austraria. Also a enjoys tricky ride of fish board. "I say fish"...whenever he rides fish, he sings this old damn song.</dd>
+                </div>
+            </dl>  
+        </section>
+        <section id="products">
+            <h2>Our B<span class="colored">o</span>ards</h2>
+            <p>We can customize your board to fit your needs when you order.</p>
+            <dl id="catalog">
+                <div>
+                    <dd class="prod_img"><img src="imgs/fish.jpg" alt="Fish"></dd>
+                    <dt>Fish</dt>
+                    <dd class="size">Length: 5'8"</dd>
+                    <dd class="size">Width: 19 &#190;"</dd>
+                    <dd class="size">Fins: 3</dd>
+                    <dd class="select_board"><button>Order</button></dd>
+                </div>
+                <div>
+                    <dd class="prod_img"><img src="imgs/short.jpg" alt="Short Board"></dd>
+                    <dt>Short Board</dt>
+                    <dd class="size">Length: 5'8"</dd>
+                    <dd class="size">Width: 18 &#8540;"</dd>
+                    <dd class="size">Fins: 3</dd>
+                    <dd class="select_board"><button>Order</button></dd>
+                </div>
+                <div>
+                    <dd class="prod_img"><img src="imgs/fun.jpg" alt="Fun Board"></dd>
+                    <dt>Fun Board</dt>
+                    <dd class="size">Length: 7'0"</dd>
+                    <dd class="size">Width: 22"</dd>
+                    <dd class="size">Fins: 2</dd>
+                    <dd class="select_board"><button>Order</button></dd>
+                </div>
+                <div>
+                    <dd class="prod_img"><img src="imgs/long.jpg" alt="Long Board"></dd>
+                    <dt>Long Board</dt>
+                    <dd class="size">Length: 9'4"</dd>
+                    <dd class="size">Width: 22 &#190;"</dd>
+                    <dd class="size">Fins: 1</dd>
+                    <dd class="select_board"><button>Order</button></dd>
+                </div>
+            </dl>           
+        </section>
+        <div class="bottom_half">
+            <section id="surf_nyc">
+                <h2>You can surf in New Y<span class="colored">o</span>rk City!</h2>
+                <div class="video_container">
+                    <iframe id="video" src="https://www.youtube.com/embed/5kfrXe_YE8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="registration">
+                <h2>Events all year r<span class="colored">o</span>und!</h2>
+                <p>To receive our news letters, please submit your email.</p>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <label>Email<input id="email" type="email" name="email" placeholder="yourmail@email.com" required></label>
+                    <input id="submit" type="submit" value="Submit">
+                </form>
+            </section> 
+        </div>
+    </main>
+    <footer>
+        &copy;2021 R<span class="colored">o</span>ckaway Surfboard
+    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

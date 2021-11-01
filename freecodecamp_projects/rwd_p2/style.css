@@ -1,0 +1,94 @@
+html{
+    font-size:16px;
+}
+body{
+    padding:0;
+    margin:0;
+    font-size:1rem;
+}
+main{
+    background-color:rgb(74,134,255);
+    background-image:url(med1.svg);
+    background-position:calc(50% - 12.5em) 1.75em;
+    background-repeat:no-repeat;
+    background-size:3em;
+    min-width:320px;
+    padding:1em;
+    border-radius:0.5em;
+    margin:0.5em;
+    color:#fff;
+}
+#title, #description{
+    text-align:center;
+}
+form{
+    background:rgb(255,255,255);
+    padding:0.5em;
+    color:#333;
+}
+div:not(dl *), dl{
+    display:flex;
+    flex-wrap:wrap;
+    padding:0.5em;
+    margin:0;
+}
+label, dt{
+    margin-right:0.5em;
+}
+div>label, dt{
+    width:20%;
+    min-width:12em;
+}
+input[type="text"], input[type="email"], input[type="number"], textarea{
+    width:calc(80% - 1.5em);
+}
+textarea{
+    height:5em;
+    resize:none;
+}
+dd{
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content:flex-end;
+    margin:0;
+}
+#submit_button{
+    justify-content:center;
+}
+button{
+    cursor:pointer;
+    background:rgb(74,134,255);
+    padding:0.25em 1.25em;
+    border:none;
+    border-radius:0.25em;
+    box-shadow:rgba(0,0,0,0.35) 0.075em 0.075em 0.1em;
+    color:#fff;
+    font-size:1.25em;
+    transition: background-color 250ms;
+}
+button:hover{
+    background:rgb(0,33,100);
+}
+button:active{
+    background:rgb(129,205,255);
+    box-shadow:none;
+}
+@media screen and (max-width: 1024px){
+    input[type="text"], input[type="email"], input[type="number"], textarea{
+        width:calc(100% - 16em);
+    }
+}
+@media screen and (max-width: 600px){
+    dl, .dropdown_menu, .dropdown_menu>label{
+        display:block;
+    }
+    input[type="text"], input[type="email"], input[type="number"], textarea{
+        width:100%;
+    }
+}
+@media screen and (max-width: 480px){
+    main{
+        background-image:none;
+        margin:0;
+    }
+}
