@@ -1,0 +1,137 @@
+*{
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    width:100vw;
+    margin:0;
+    padding:0;
+    font-size:16px;
+}
+body{
+    margin:0;
+    font-family:'Roboto', 'Helvetica', Arial, sans-serif;
+    font-size:1rem; 
+}
+#navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:12.5em;
+    height:100vh;
+    background:rgb(220,220,220);
+}
+#navbar header{
+    padding:1rem;
+}
+#navbar ul{
+    list-style:none;
+    padding:0;
+}
+#navbar li{
+    margin:0;
+}
+#navbar li a{
+    display:flex;
+    justify-content:left;
+    align-items:center;
+    width:100%;
+    height:2.5em;
+    padding:0 1em;
+    color:#454545;
+    text-decoration:none;
+}
+#navbar li a:hover{
+    background:rgba(95,129,73,0.15);
+}
+header{
+    font-size:2em;
+}
+#main-doc{
+    padding:0 1em;
+    margin-left:14.5em;
+}
+.main-section{
+    min-height:100vh;
+    padding:1em 0;
+    margin:0 0 3em 0;
+}
+h2,h3{
+    color:#5f8149;
+    font-weight:normal;
+}
+h3{
+    margin-top:2em;
+    text-decoration:underline;
+}
+code{
+    padding:0 0.25em;
+    background:rgba(0,0,0,0.1);
+    margin:0 0.25em;
+}
+ol,ul{
+    padding-left:1.5em;
+}
+li{
+    margin-bottom:0.5em;
+}
+.code_sample{
+    display:block;
+    width:calc(100% - 1em);
+    max-width:26em;
+    padding:0.5em;
+    background:rgba(0,0,0,0.1);
+    border:rgb(81,133,77) 1px solid;
+    margin:0.5em;
+}
+.code_sample code{
+    padding:0;
+    background:none;
+    margin:0;
+}
+dl *{
+    padding:0;
+    margin:0.1em 0;
+}
+dd{
+    margin-left:1em;
+}
+.section_bottom{
+    display:none;
+}
+@media only screen and (max-width:700px){
+    #navbar{
+        position:static;
+        width:100vw;
+        height:auto;
+        background:rgb(233,233,233);
+    }
+    #navbar header{
+        width:100vw;
+        padding:0.5rem 0;
+        background:rgb(220,220,220);
+        border-bottom:rgba(0,0,0,0.2) 1px solid;
+        text-align:center;
+    }
+    #navbar ul{
+        margin:0.5em 0;
+    }
+    #navbar li a{
+        height:1.5em;
+        padding:0 1em;
+    }
+    #main-doc{
+        width:100vw;
+        margin:0;
+        overflow:hidden;
+    }
+    .main-section{
+        min-height:100vh;
+        padding:1em 0;
+    }
+    .section_bottom{
+        display:flex;
+        justify-content:flex-end;
+        margin-top:2em;
+    }
+}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project4 Technical Documentation Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Responsive CSS</header>
+        <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#Viewport" class="nav-link">Viewport</a></li>
+            <li><a href="#Media_Queries" class="nav-link">Media Queries</a></li>
+            <li><a href="#Images_&_Videos" class="nav-link">Images & Videos</a></li>
+            <li><a href="#Grid_View" class="nav-link">Grid View</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <h2>What is Responsive Web Design?</h2>
+            <ul>
+                <li>Responsive web design makes your web page look good on all devices.</li>
+                <li>Responsive web design uses only HTML and CSS.</li>
+                <li>Responsive web design is not a program or a JavaScript.</li>
+            </ul>
+            <h3>Designing For The Best Experience For All Users</h3>
+            <p>Web pages can be viewed using many different devices: desktops, tablets, and phones. Your web page should look good, and be easy to use, regardless of the device.</p>
+            <p>Web pages should not leave out information to fit smaller devices, but rather adapt its content to fit any device.</p>
+            <p>It is called responsive web design when you use CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen.</p>
+            <div class="section_bottom"><a href="#">back to top</a></div>
+        </section>
+
+        <section id="Viewport" class="main-section">
+            <header>Viewport</header>
+            <h2>What is The Viewport?</h2>
+            <ul>
+                <li>The viewport is the user's visible area of a web page.</li>
+                <li>The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.</li>
+            </ul>
+            <p>Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.</p>
+            <p>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.This was not perfect, but a quick fix.</p>
+            <h3>Setting The Viewport</h3>
+            <p>HTML5 introduced a method to let web designers take control over the viewport, through the<code>&lt;meta&gt;</code>tag.</p>
+            <p>You should include the following<code>&lt;meta&gt;</code>viewport element in all your web pages:</p>
+            <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+            <p>This<code>width=device-width</code>gives the browser instructions on how to control the page's dimensions and scaling.</p>
+            <p>The<code>initial-scale=1.0</code>part sets the initial zoom level when the page is first loaded by the browser.</p>
+            <h3>Size Content to The Viewport</h3>
+            <p>Users are used to scroll websites vertically on both desktop and mobile devices - but not horizontally.</p>
+            <p>So, if the user is forced to scroll horizontally, or zoom out, to see the whole web page it results in a poor user experience.</p>
+            <p>Some additional rules to follow:</p>
+            <ol>
+                <li><strong>NOT use large fixed width elements</strong> - For example, if an image is displayed at a width wider than the viewport it can cause the viewport to scroll horizontally. Remember to adjust this content to fit within the width of the viewport.</li>
+                <li><strong>Do NOT let the content rely on a particular viewport width to render well</strong> - Since screen dimensions and width in CSS pixels vary widely between devices, content should not rely on a particular viewport width to render well.</li>
+                <li><strong>Use CSS media queries to apply different styling for small and large screens</strong> - Setting large absolute CSS widths for page elements will cause the element to be too wide for the viewport on a smaller device. Instead, consider using relative width values, such as width: 100%. Also, be careful of using large absolute positioning values. It may cause the element to fall outside the viewport on small devices.</li>
+            </ol>
+            <div class="section_bottom"><a href="#">back to top</a></div>
+        </section>
+
+        <section id="Media_Queries" class="main-section">
+            <header>Media Queries</header>
+            <h2>What is a Media Query?</h2>
+            <ul>
+                <li>Media query is a CSS technique introduced in CSS3.</li>
+                <li>It uses the<code>@media</code>rule to include a block of CSS properties only if a certain condition is true.</li>
+            </ul>
+            <h3>Add a Breakpoint</h3>
+            <p>Media queries can help with the problem of look in small screen. We can add a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.</p>
+            <p>Example:</p>
+            <div class="code_sample">
+                <dl>
+                    <dt><code>@media only screen and (max-width:600px){</code></dt>
+                    <dd>
+                        <dl>
+                            <dt><code>h1{</code></dt>
+                            <dd><code>background:rgba(0,130,180,0.5);</code></dd>
+                            <dd class="close"><code>}</code></dd>
+                        </dl>
+                    </dd>
+                    <dd class="close"><code>}</code></dd>
+                </dl>
+            </div>
+            <div class="section_bottom"><a href="#">back to top</a></div>
+        </section>
+
+        <section id="Images_&_Videos" class="main-section">
+            <header>Images & Videos</header>
+            <h3>Using The width Property</h3>
+            <p>If the<code>width</code>property is set to a percentage and the<code>height</code>property is set to "auto", the image will be responsive and scale up and down:</p>
+            <div class="code_sample">
+                <dl>
+                    <dt><code>img{</code></dt>
+                    <dd>width:100%;</dd>
+                    <dd>height:auto;</dd>
+                    <dd><code>}</code></dd>
+                </dl>
+            </div>
+            <h3>Using The max-width Property</h3>
+            <p>If the<code>max-width</code>property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:</p>
+            <div class="code_sample">
+                <dl>
+                    <dt><code>video{</code></dt>
+                    <dd>width:100%;</dd>
+                    <dd>height:auto;</dd>
+                    <dd><code>}</code></dd>
+                </dl>
+            </div>
+            <div class="section_bottom"><a href="#">back to top</a></div>
+        </section>
+
+        <section id="Grid_View" class="main-section">
+            <header>Grid View</header>
+            <h2>What is a Grid View?</h2>
+            <p>Many web pages are based on a grid view, which means that the page is divided into columns.</p>
+            <p>Using a grid view is very helpful when designing web pages. It makes it easier to place elements on the page.</p>
+            <p>A responsive grid view often has 12 columns, and has a total width of 100%, and will shrink and expand as you resize the browser window.</p>
+            <div class="section_bottom"><a href="#">back to top</a></div>
+        </section>
+    </main>
+    <!--script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script-->
+</body>
+</html>
