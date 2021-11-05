@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Project5 Personal Portfolio</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <span>le portefeuille</span>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#welcome-section">introduction</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#connection">connection</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="welcome-section">
+            <div id="video_container">
+                <video autoplay muted>
+                    <source src="imgs/intro_black.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="introduction">
+                <h1>Hello My Name Is Jun Komura</h1>
+                <p>I am a frontend web developer.</p>
+                <p>This is my personal portforlio.</p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>projects</h2>
+            <div class="project_categories">
+                <h3>freeCodeCamp projects: Responsive web design</h3>
+                <dl>
+                    <a href="https://jkomura.github.io/freecodecamp_projects/rwd_p1/" target="_blank">
+                        <dd class="screen_img" id="project1"><img src="imgs/p_rwd1.jpg"></dd>
+                        <dt class="project-tile">Tribute Page</dt>
+                    </a>
+                    <a href="https://jkomura.github.io/freecodecamp_projects/rwd_p2/" target="_blank">
+                        <dd class="screen_img" id="project2"><img src="imgs/p_rwd2.png"></dd>
+                        <dt class="project-tile">Survey Form</dt>
+                    </a>
+                    <a href="https://jkomura.github.io/freecodecamp_projects/rwd_p3/" target="_blank">
+                        <dd class="screen_img" id="project3"><img src="imgs/p_rwd3.jpg"></dd>
+                        <dt class="project-tile">Product Landing Page</dt>
+                    </a>
+                    <a href="https://jkomura.github.io/freecodecamp_projects/rwd_p4/" target="_blank">
+                        <dd class="screen_img" id="project4"><img src="imgs/p_rwd4.png"></dd>
+                        <dt class="project-tile">Technical Documentation Page</dt>
+                    </a>
+                </dl>
+            </div>
+        </section>
+        <section id="connection">
+            <h2>connection</h2>
+            <div>
+                <form id="contact" action="https://www.freecodecamp.com/email-submit">
+                    <label for="email">email:</label><input type="email" name="email" placeholder="name@email.com" required>
+                    <label for="message">message:</label><textarea name="message" required></textarea>
+                    <div><input type="submit" value="submit"></div>
+                </form>
+                <ul id="socials">
+                    <li>
+                        <a id="profile-link" href="https://github.com/jkomura/jkomura.github.io" target="_blank" class="">
+                            <i class="fab fa-github-square fa-fw"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" class="">
+                            <i class="fab fa-linkedin fa-fw"></i> LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/jun.komura/" target="_blank" class="">
+                            <i class="fab fa-facebook-square fa-fw"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" class="">
+                            <i class="fab fa-instagram fa-fw"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" class="">
+                           <i class="fab fa-twitter-square fa-fw"></i> Twitter
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <span>&copy; 2021 Jun Komura All right reserved.</span>
+    </footer>
+    <!--script href="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script-->
+</body>
+</html>
