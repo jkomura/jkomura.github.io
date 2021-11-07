@@ -10,50 +10,49 @@
     <main>
         <h1 id="title">Family Medical Survey</h1>
         <p id="description">Please answer the questions below for our research.</p>
-        <form id="survey-form">
-            <div>
-                <label id="name-label" for="name" >Name</label>
-                <input type="text" id="name" placeholder="your name" required>
+        <form id="survey-form" action="#" method="post">
+            
+            <label id="name-label" for="name" >Name</label>
+            <input type="text" id="name" placeholder="your name" required>
+            
+            <label id="email-label" for="email" >Email</label>
+            <input type="email" id="email" placeholder="yourname@email.com" required>
+            
+            <label class="top_align">Mrital Status</label>
+            <div class="marital_status">
+                <label><input type="radio" name="radios" value="radio1"> Single</label>
+                <label><input type="radio" name="radios" value="radio2"> Married</label>
             </div>
-            <div>
-                <label id="email-label" for="email" >Email</label>
-                <input type="email" id="email" placeholder="yourname@email.com" required>
+            
+            
+            <label id="number-label" for="number">Number of Children</label>
+            <input type="number" id="number" max="10" min="0" placeholder="2" required>
+            
+            
+            <label for="dropdown" class="top_align">Household Income</label>
+            <select name="dropdown" id="dropdown">
+                <option disabled selected>Choose</option>
+                <option value="option1">under $39,999</option>
+                <option value="option2">$40,000 - $74,999</option>
+                <option value="option3">$75,000 - $99,999</option>
+                <option value="option4">over $100,000</option>
+            </select>
+            
+            
+            <label class="top_align">Family Medical History</label>
+            <div class="medical_history">
+                <label><input type="checkbox" name="checks" value="check1"> Asthma</label>
+                <label><input type="checkbox" name="checks" value="check2"> Cancer</label>
+                <label><input type="checkbox" name="checks" value="check3"> Diabetes</label>
+                <label><input type="checkbox" name="checks" value="check4"> Hight Blood Pressure</label>
             </div>
-            <dl>
-                <dt>Mrital Status</dt>
-                <div>
-                    <dd><label for="radio1">Single</label><input type="radio" id="radio1" name="radios" value="radio1"></dd>
-                    <dd><label for="radio2">Married</label><input type="radio" id="radio2" name="radios" value="radio2"></dd>
-                </div>
-            </dl>
-            <div>
-                <label id="number-label" for="number">Number of Children</label>
-                <input type="number" id="number" max="10" min="0" placeholder="2" required>
-            </div>
-            <div class="dropdown_menu">
-                <label for="dropdown">Household Income</label>
-                <select name="dropdown" id="dropdown">
-                    <option disabled selected>Choose</option>
-                    <option value="option1">under $39,999</option>
-                    <option value="option2">$40,000 - $74,999</option>
-                    <option value="option3">$75,000 - $99,999</option>
-                    <option value="option4">over $100,000</option>
-                </select>
-            </div>
-            <dl>
-                <dt>Family Medical History</dt>
-                <div>
-                    <dd><label for="check1">Asthma</label><input type="checkbox" id="check1" name="checks" value="check1"></dd>
-                    <dd><label for="check2">Cancer</label><input type="checkbox" id="check2" name="checks" value="check2"></dd>
-                    <dd><label for="check3">Diabetes</label><input type="checkbox" id="check3" name="checks" value="check3"></dd>
-                    <dd><label for="check4">Hight Blood Pressure</label><input type="checkbox" id="check4" name="checks" value="check4"></dd>
-                </div>
-            </dl>
-            <div>
-                <label for="textarea">Additional Details</label><textarea id="textarea"></textarea>
-            </div>
+            
+            
+            <label for="textarea" class="top_align">Additional Details</label>
+            <textarea id="textarea"></textarea>
+            
             <div id="submit_button">
-                <button type="submit" id="submit">submit</button>
+                <input type="submit" id="submit" value="Submit">
             </div>
         </form>
     </main>

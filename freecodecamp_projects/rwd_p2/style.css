@@ -22,40 +22,36 @@ main{
     text-align:center;
 }
 form{
+    display:grid;
+    grid-template-columns:10.5em 1fr;
+    row-gap:0.5em;
+    align-items:center;
     background:rgb(255,255,255);
-    padding:0.5em;
+    padding:1em;
     color:#333;
 }
-div:not(dl *), dl{
+.top_align{
+    align-self:start;
+}
+.marital_status label, .medical_history label{
     display:flex;
-    flex-wrap:wrap;
-    padding:0.5em;
-    margin:0;
+    align-items:center;
 }
-label, dt{
+.marital_status input, .medical_history input{
     margin-right:0.5em;
-}
-div>label, dt{
-    width:20%;
-    min-width:12em;
-}
-input[type="text"], input[type="email"], input[type="number"], textarea{
-    width:calc(80% - 1.5em);
 }
 textarea{
     height:5em;
     resize:none;
 }
-dd{
-    display:flex;
-    flex-direction:row-reverse;
-    justify-content:flex-end;
-    margin:0;
-}
 #submit_button{
-    justify-content:center;
+    grid-column:1/3;
+    justify-self:center;
 }
-button{
+input[type="text"], input[type="email"], input[type="number"], select, textarea{
+    padding:0.25em
+}
+input[type="submit"]{
     cursor:pointer;
     background:rgb(74,134,255);
     padding:0.25em 1.25em;
@@ -66,24 +62,23 @@ button{
     font-size:1.25em;
     transition: background-color 250ms;
 }
-button:hover{
+input[type="submit"]:hover{
     background:rgb(0,33,100);
 }
-button:active{
+input[type="submit"]:active{
     background:rgb(129,205,255);
     box-shadow:none;
 }
-@media screen and (max-width: 1024px){
-    input[type="text"], input[type="email"], input[type="number"], textarea{
-        width:calc(100% - 16em);
-    }
-}
+
 @media screen and (max-width: 600px){
-    dl, .dropdown_menu, .dropdown_menu>label{
-        display:block;
+    form{
+        grid-gap:0.25em;
     }
-    input[type="text"], input[type="email"], input[type="number"], textarea{
-        width:100%;
+    form *{
+        grid-column:1/3;
+    }
+    input[type="text"], input[type="email"], input[type="number"], select, textarea, .marital_status, .medical_history{
+        margin-bottom:1em;
     }
 }
 @media screen and (max-width: 480px){
