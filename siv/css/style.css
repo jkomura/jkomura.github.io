@@ -427,8 +427,12 @@ nav li.active  a{
 #address h3, dt {
   text-transform: uppercase;
 }
+#address dt {
+  margin-bottom: 0.25em;
+  color: #f0cd74
+}
 #address div.locations {
-  padding: 0 0 1em 1em;
+  padding: 0 0 1.5em 1em;
 }
 #address div.locations:nth-child(4){
   margin-bottom: 2em;
