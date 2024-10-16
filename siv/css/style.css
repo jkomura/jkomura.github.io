@@ -74,17 +74,27 @@ a.button:hover {
 /*header*/
 header {
   display: flex;
-  justify-content: space-between;
-  padding: 2.5em 0;
+  align-items: center;
+  height: 8.5em;
 }
 header .logo {
   width: 375px;
   height: 3.5em;
+  margin-left: 4em;
   background-image: url(../img/siv_logo5_black_2x.png);
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 2.5em;
   z-index: 3;
+}
+@media (max-width: 430px) {
+  header {
+    height: 5em;
+  }
+  header .logo {
+    width: 275px;
+    height: 3em;
+    margin-left: 5vw;
+  }
 }
 /*header*/
 
@@ -131,6 +141,23 @@ nav li a:hover {
 }
 nav li.active  a {
   color: #FFA104;
+}
+@media (max-width: 430px) {
+  nav {
+    position: static;
+    width: 100vw;
+    height: auto;
+    padding: 1vw 4vw;
+    margin: 0;
+  }
+  nav ul {
+    height: auto;
+    flex-direction: column;
+  }
+  nav li {
+    height: auto;
+    text-align: center;
+  }
 }
 /*nav*/
 
@@ -245,6 +272,12 @@ nav li.active  a {
     padding: 0.75em 2em;
   }
 }
+@media (max-width: 430px) {
+  #home_top .catch ul {
+    font-size: 1.25em;
+    letter-spacing: -0.05em;
+  }
+}
 /*home section*/
 
 /*what we do section*/
@@ -315,10 +348,18 @@ nav li.active  a {
   #services dl div {
     width: calc( (100% - 2em) / 2);
   }
+  #services dt {
+    line-height: 0.9em;
+  }
 }
 @media (max-width: 875px) {
   #services dl div {
     width: 100%;
+  }
+}
+@media (max-width: 430px) {
+  #services dl div {
+    min-width: auto;
   }
 }
 /*what we do section*/
@@ -399,6 +440,12 @@ nav li.active  a {
     font-size: 1em;
   }
 }
+@media (max-width: 430px) {
+  #works li span {
+    font-size: 1.25em;
+    line-height: 1em;
+  }
+}
 /*work section*/
 
 
@@ -456,6 +503,12 @@ nav li.active  a {
 @media (max-width: 500px) {
   #about h3 {
     font-size: 0.9em;
+    padding: 0 0.5em;
+  }
+}
+@media (max-width: 390px) {
+  #about h3 {
+    font-size: 0.75em;
     padding: 0 0.5em;
   }
 }
@@ -579,16 +632,8 @@ footer .sonic {
     justify-content: center;
   }
 }
-
-
-@media (min-width: 701px) {
-
-}
-
-@media (max-width: 700px) {
-
-}
-
-@media (max-width: 500px) {
-
+@media (max-width: 430px) {
+  footer{
+    font-size: 0.65em;
+  }
 }
