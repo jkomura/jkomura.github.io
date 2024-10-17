@@ -32,9 +32,6 @@ ul li {
 a {
   text-decoration: none;
 }
-section {
-  padding: 5em 0 0 0;
-}
 .page {
   scroll-behavior: smooth;
 }
@@ -69,6 +66,17 @@ a.button:hover {
     box-shadow: rgba(0,0,0,0.5) 0 0 5px;
   }
 }
+section {
+  padding: 5em 0 0 0;
+}
+@media (max-width: 430px) {
+  section {
+    display: none;
+  }
+  section.active {
+    display: block;
+  }
+}
 
 
 /*header*/
@@ -85,6 +93,12 @@ header .logo {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 3;
+}
+@media (max-width: 975px) {
+  header {
+    justify-content: center;
+    height: 6em;
+  }
 }
 @media (max-width: 430px) {
   header {
@@ -141,6 +155,15 @@ nav li a:hover {
 }
 nav li.active  a {
   color: #FFA104;
+}
+@media (max-width: 975px) {
+  nav {
+    margin: -1.5em 0 0 0;
+    padding: 0;
+  }
+  nav ul {
+    justify-content: center;
+  }
 }
 @media (max-width: 430px) {
   nav {
@@ -307,6 +330,7 @@ nav li.active  a {
 #services dt {
   font-weight: 700;
   color: #781114;
+  line-height: 0.9em;
 }
 #services dd.icons {
   grid-row: 1 / 3;
@@ -347,9 +371,6 @@ nav li.active  a {
 @media (max-width: 1350px) {
   #services dl div {
     width: calc( (100% - 2em) / 2);
-  }
-  #services dt {
-    line-height: 0.9em;
   }
 }
 @media (max-width: 875px) {
@@ -441,9 +462,26 @@ nav li.active  a {
   }
 }
 @media (max-width: 430px) {
+  #works li {
+    position: relative;
+  }
+  #works li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgb(0,0,0);
+  } 
+  #works li div {
+    opacity: 0.65;
+  }
   #works li span {
     font-size: 1.25em;
     line-height: 1em;
+    text-shadow: rgba(0,0,0,1) 0 0 5px;
+    opacity: 1;
   }
 }
 /*work section*/
@@ -517,12 +555,17 @@ nav li.active  a {
 
 /*contact section*/
 #contact {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   background-image: url(../img/pattern_shapes.jpg);
   padding: 5em 10vw 7em 10vw;
   color: #fff;
+}
+#contact > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#contact h2 {
+  margin-bottom: 0.5em;
 }
 #contact h2{
   color: #FFA104;
@@ -568,6 +611,9 @@ nav li.active  a {
   background: rgba(0,0,0,0.5);
   color: #fff;
 }
+#contact_form input[ name = "phone" ] {
+  display: none;
+}
 #contact_form textarea {
   height: 15em;
   margin-bottom: 5em;
@@ -610,6 +656,9 @@ nav li.active  a {
   }
 }
 @media (max-width: 430px) {
+  #contact_form input[ name = "phone" ] {
+    display: block;
+  }
   #contact_form button {
     align-self: center;
     background: rgba(255,255,255,0.25);
