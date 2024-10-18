@@ -69,11 +69,21 @@ a.button:hover {
 section {
   padding: 5em 0 0 0;
 }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 430px) {
   section {
     display: none;
+    padding: 0;
   }
   section.active {
+    animation: fadein 0.5s linear 0s;
     display: block;
   }
 }
@@ -102,7 +112,9 @@ header .logo {
 }
 @media (max-width: 430px) {
   header {
+    justify-content: flex-start;
     height: 5em;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
   }
   header .logo {
     width: 275px;
@@ -115,7 +127,7 @@ header .logo {
 
 /*nav*/
 nav {
-  position:sticky;
+  position: sticky;
   top: 0;
   overflow: hidden;
   width: 100vw;
@@ -124,6 +136,53 @@ nav {
   margin: -6em 0 2.5em 0;
   background: rgba(255, 255, 255, 0.8);
   z-index: 2;
+}
+nav .mobile-menu{
+  display: none;
+}
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0.75em;
+  right: 0.75em;
+  height: 3.25em;
+  width: 3.25em;
+  background-color: rgba(0,0,0,0.75);
+  border-radius: 0.5em;
+  z-index: 5;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 3px;
+  width: 2em;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.menu-btn span:before {
+  bottom: 0.6em;
+}
+.menu-btn span:after {
+  top: 0.6em;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+#menu-btn-check {
+  display: none;
 }
 nav ul {
   display: flex;
@@ -165,13 +224,25 @@ nav li.active  a {
     justify-content: center;
   }
 }
+@media (max-width: 550px) {
+  nav li a {
+    padding: 1.5em 1.5em;
+  }
+}
 @media (max-width: 430px) {
   nav {
     position: static;
     width: 100vw;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+  nav:has(input:checked) {
     height: auto;
     padding: 1vw 4vw;
-    margin: 0;
+  }
+  nav .mobile-menu {
+    display: block;
   }
   nav ul {
     height: auto;
@@ -303,6 +374,7 @@ nav li.active  a {
 }
 /*home section*/
 
+
 /*what we do section*/
 #services {
   padding-top: 0;
@@ -379,6 +451,14 @@ nav li.active  a {
   }
 }
 @media (max-width: 430px) {
+  #services h2 {
+    align-items: flex-start;
+    height: 3em;
+    padding-top: 0.5em;
+  }
+  #services dl {
+    padding-bottom: 2em;
+  }
   #services dl div {
     min-width: auto;
   }
@@ -544,6 +624,11 @@ nav li.active  a {
     padding: 0 0.5em;
   }
 }
+@media (max-width: 430px) {
+  #about h2{
+    margin-top: 0.5em;
+  }
+}
 @media (max-width: 390px) {
   #about h3 {
     font-size: 0.75em;
@@ -678,7 +763,7 @@ footer {
   text-decoration: none;
   color: #fff;
   background: rgb(17,17,17);
-  padding: 1.5em 1em 10.5em 1em;
+  padding: 1.5em 10vw 10.5em 0;
 }
 footer .sonic {
   margin:0 0.5em;
@@ -686,6 +771,7 @@ footer .sonic {
 @media (max-width: 900px) {
   footer{
     justify-content: center;
+    padding: 1.5em 0 10vw 0;
   }
 }
 @media (max-width: 430px) {
